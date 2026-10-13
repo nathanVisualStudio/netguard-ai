@@ -1,0 +1,24 @@
+{
+  "name": "netguard-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Desktop network scanner with ML risk scoring and PDF reports",
+  "main": "electron/main.cjs",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -k \"vite frontend --port 5173 --strictPort\" \"wait-on tcp:5173 && electron . --dev\"",
+    "build": "vite build frontend",
+    "start": "npm run build && electron ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^9.0.0",
+    "electron": "^33.0.0",
+    "vite": "^5.4.0",
+    "wait-on": "^8.0.0"
+  }
+}
